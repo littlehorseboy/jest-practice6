@@ -5,7 +5,7 @@ export const createUser = async () => {
   const response = await fetch('https://zh.wikipedia.org/w/api.php?action=opensearch&format=json&limit=5&origin=*&search=馬', {
     method: 'POST',
   });
-  const userId = await response.test();
+  const userId = await response.text();
   return userId;
 };
 
